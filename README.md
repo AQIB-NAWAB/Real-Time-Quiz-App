@@ -4,6 +4,8 @@
 
 This project is a modern, real-time quiz application developed using the latest web technologies. The application allows users to participate in quizzes, submit answers in real-time, and view the leaderboard dynamically, leveraging the power of WebSockets for seamless real-time interactions. The app is designed with clean, scalable architecture and ensures high code quality through TypeScript and class-based implementation.
 
+## Output
+![outputVideo](./images//video.gif)
 ## Key Features
 
 1. **Real-Time Quiz Gameplay**:
