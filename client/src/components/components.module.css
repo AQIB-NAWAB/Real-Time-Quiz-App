@@ -1,0 +1,205 @@
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 15px 20px;
+    gap: 10px;
+    width: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 9999;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .cardHolder {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .modalContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .questionBox {
+    width: 60%;
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    min-height: 60vh;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .cross {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .cross:hover {
+    color: #dc3545;
+  }
+  
+  .questionBody {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+  }
+
+  .optionContainer label{
+    display: flex;
+    align-items: center ;
+  }
+  .optionContainer .holder{
+    display: flex;
+    gap: 20px;
+    align-content: center;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .inputField:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+  }
+  
+  .optionContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+
+  
+  .addOptionBtn,
+  .submitBtn,
+  .removeBtn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px;
+  }
+  
+  .addOptionBtn:hover,
+  .submitBtn:hover,
+  .removeBtn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .removeBtn {
+    background-color: #dc3545;
+  }
+  
+  .removeBtn:hover {
+    background-color: #c82333;
+  }
+  
+  .addOptionBtn:disabled,
+  .submitBtn:disabled,
+  .removeBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 768px) {
+    .questionBox {
+      width: 90%;
+      padding: 15px;
+      gap: 15px;
+    }
+  
+    .inputField {
+      padding: 10px;
+      font-size: 13px;
+    }
+  
+    .addOptionBtn,
+    .submitBtn,
+    .removeBtn {
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+  }
+
+  
+  .customAnimation {
+    animation: fadeIn 0.5s ease-out, fadeOut 2s ease-in-out 2.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
